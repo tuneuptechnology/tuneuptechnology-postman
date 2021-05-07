@@ -1,0 +1,789 @@
+{
+	"info": {
+		"_postman_id": "a713a21a-0510-48bc-b822-11e32ac639d6",
+		"name": "TuneApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customers",
+			"item": [
+				{
+					"name": "Create Customer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Email",
+								"value": "{{email}}",
+								"type": "text"
+							},
+							{
+								"key": "Api-Key",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstname\": \"Jake\",\n    \"lastname\": \"Peralta\",\n    \"email\": \"jake@example.com\",\n    \"phone\": \"8015551234\",\n    \"user_id\": 1,\n    \"notes\": \"Believes he is a good detective.\",\n    \"location_id\": 1\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/customers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Email",
+								"value": "{{email}}",
+								"type": "text"
+							},
+							{
+								"key": "Api-Key",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstname\": \"Jake\",\n    \"lastname\": \"Peralta\",\n    \"email\": \"jake@example.com\",\n    \"phone\": \"8015551234\",\n    \"user_id\": 1,\n    \"notes\": \"Believes he is a good detective.\",\n    \"location_id\": 1\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/customers/{{customer_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"{{customer_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Email",
+								"value": "{{email}}",
+								"type": "text"
+							},
+							{
+								"key": "Api-Key",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/customers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Email",
+								"value": "{{email}}",
+								"type": "text"
+							},
+							{
+								"key": "Api-Key",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/customers/{{customer_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"{{customer_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Email",
+								"value": "{{email}}",
+								"type": "text"
+							},
+							{
+								"key": "Api-Key",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/customers/{{customer_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"{{customer_id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Inventory",
+			"item": [
+				{
+					"name": "Create Inventory",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Email",
+								"value": "{{email}}",
+								"type": "text"
+							},
+							{
+								"key": "Api-Key",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Inventory Item\",\n    \"inventory_type_id\": 1,\n    \"part_number\": \"1234\",\n    \"sku\": \"1234\",\n    \"notes\": \"here are some notes\",\n    \"part_price\": 19.99,\n    \"location_id\": 1,\n    \"quantity\": 1\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/inventory",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"inventory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Inventory",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Email",
+								"value": "{{email}}",
+								"type": "text"
+							},
+							{
+								"key": "Api-Key",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Inventory Item\",\n    \"inventory_type_id\": 1,\n    \"part_number\": \"1234\",\n    \"sku\": \"1234\",\n    \"notes\": \"here are some notes\",\n    \"part_price\": 19.99,\n    \"location_id\": 1,\n    \"quantity\": 1\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/inventory",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"inventory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Inventory",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Email",
+								"value": "{{email}}",
+								"type": "text"
+							},
+							{
+								"key": "Api-Key",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/inventory/{{inventory_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"inventory",
+								"{{inventory_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Inventory",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Email",
+								"value": "{{email}}",
+								"type": "text"
+							},
+							{
+								"key": "Api-Key",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/inventory/{{inventory_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"inventory",
+								"{{inventory_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Inventory",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Email",
+								"value": "{{email}}",
+								"type": "text"
+							},
+							{
+								"key": "Api-Key",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Inventory Item\",\n    \"inventory_type_id\": 1,\n    \"part_number\": \"1234\",\n    \"sku\": \"1234\",\n    \"notes\": \"here are some notes\",\n    \"part_price\": 19.99,\n    \"location_id\": 1,\n    \"quantity\": 1\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/inventory",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"inventory"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Locations",
+			"item": [
+				{
+					"name": "Create Location",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Email",
+								"value": "{{email}}",
+								"type": "text"
+							},
+							{
+								"key": "Api-Key",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Location Name\",\n    \"street\": \"123 California Ave\",\n    \"city\": \"Salt Lake\",\n    \"state\": \"UT\",\n    \"zip\": 84043\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/locations",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"locations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Location",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Email",
+								"value": "{{email}}",
+								"type": "text"
+							},
+							{
+								"key": "Api-Key",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Location Name\",\n    \"street\": \"123 California Ave\",\n    \"city\": \"Salt Lake\",\n    \"state\": \"UT\",\n    \"zip\": 84043\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/locations/{{location_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"locations",
+								"{{location_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Locations",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Email",
+								"value": "{{email}}",
+								"type": "text"
+							},
+							{
+								"key": "Api-Key",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/locations",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"locations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Location",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Email",
+								"value": "{{email}}",
+								"type": "text"
+							},
+							{
+								"key": "Api-Key",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/locations/{{location_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"locations",
+								"{{location_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Location",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Email",
+								"value": "{{email}}",
+								"type": "text"
+							},
+							{
+								"key": "Api-Key",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/locations/{{location_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"locations",
+								"{{location_id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tickets",
+			"item": [
+				{
+					"name": "Create Ticket",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Email",
+								"value": "{{email}}",
+								"type": "text"
+							},
+							{
+								"key": "Api-Key",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customer_id\": 1,\n    \"ticket_type_id\": 1,\n    \"serial\": \"10000\",\n    \"user_id\": 1,\n    \"notes\": \"here are some notes\",\n    \"title\": \"Fancy Title\",\n    \"status\": 1,\n    \"device\": \"2\",\n    \"imei\": 10000,\n    \"location_id\": 1\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/tickets",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tickets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Ticket",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Email",
+								"value": "{{email}}",
+								"type": "text"
+							},
+							{
+								"key": "Api-Key",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customer_id\": 1,\n    \"ticket_type_id\": 1,\n    \"serial\": \"10000\",\n    \"user_id\": 1,\n    \"notes\": \"here are some notes\",\n    \"title\": \"Fancy Title\",\n    \"status\": 1,\n    \"device\": \"2\",\n    \"imei\": 10000,\n    \"location_id\": 1\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/tickets/{{ticket_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tickets",
+								"{{ticket_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tickets",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Email",
+								"value": "{{email}}",
+								"type": "text"
+							},
+							{
+								"key": "Api-Key",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/tickets",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tickets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Ticket",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Email",
+								"value": "{{email}}",
+								"type": "text"
+							},
+							{
+								"key": "Api-Key",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/tickets/{{ticket_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tickets",
+								"{{ticket_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Ticket",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Email",
+								"value": "{{email}}",
+								"type": "text"
+							},
+							{
+								"key": "Api-Key",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/tickets/{{ticket_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tickets",
+								"{{ticket_id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "email",
+			"value": "example@example.com"
+		},
+		{
+			"key": "api_key",
+			"value": "12345678901234567890"
+		},
+		{
+			"key": "base_url",
+			"value": "app.tuneuptechnology.com/api"
+		},
+		{
+			"key": "customer_id",
+			"value": "1"
+		},
+		{
+			"key": "inventory_id",
+			"value": "1"
+		},
+		{
+			"key": "location_id",
+			"value": "1"
+		},
+		{
+			"key": "ticket_id",
+			"value": "1"
+		}
+	]
+}
