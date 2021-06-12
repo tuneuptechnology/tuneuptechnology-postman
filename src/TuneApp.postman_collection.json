@@ -580,7 +580,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"customer_id\": 1,\n    \"ticket_type_id\": 1,\n    \"serial\": \"10000\",\n    \"user_id\": 1,\n    \"notes\": \"here are some notes\",\n    \"title\": \"Fancy Title\",\n    \"status\": 1,\n    \"device\": \"2\",\n    \"imei\": 10000,\n    \"location_id\": 1\n}"
+							"raw": "{\n    \"customer_id\": 1,\n    \"ticket_type_id\": 1,\n    \"serial\": \"10000\",\n    \"user_id\": 1,\n    \"notes\": \"here are some notes\",\n    \"title\": \"Fancy Title\",\n    \"status\": 1,\n    \"device\": \"iPhone\",\n    \"imei\": 10000,\n    \"location_id\": 1\n}"
 						},
 						"url": {
 							"raw": "{{base_url}}/tickets",
@@ -617,7 +617,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"customer_id\": 1,\n    \"ticket_type_id\": 1,\n    \"serial\": \"10000\",\n    \"user_id\": 1,\n    \"notes\": \"here are some notes\",\n    \"title\": \"Fancy Title\",\n    \"status\": 1,\n    \"device\": \"2\",\n    \"imei\": 10000,\n    \"location_id\": 1\n}"
+							"raw": "{\n    \"customer_id\": 1,\n    \"ticket_type_id\": 1,\n    \"serial\": \"10000\",\n    \"user_id\": 1,\n    \"notes\": \"here are some notes\",\n    \"title\": \"Fancy Title\",\n    \"status\": 1,\n    \"device\": \"iPhone\",\n    \"imei\": 10000,\n    \"location_id\": 1\n}"
 						},
 						"url": {
 							"raw": "{{base_url}}/tickets/{{ticket_id}}",
