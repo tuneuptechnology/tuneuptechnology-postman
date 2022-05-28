@@ -8,8 +8,7 @@ The Postman collection for the [Tuneup Technology API](https://app.tuneuptechnol
 
 1. Open [Postman](https://postman.com)
 1. Select `Import`
-1. Choose `code repository`, then `GitHub`
-1. Provide the link to this repo
+1. Choose `file`, then upload the `src/TuneApp.postman_collection.json` file
 
 ## Usage
 
